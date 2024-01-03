@@ -1,0 +1,36 @@
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: #01000a;
+  padding: 0 2rem;
+}
+
+section {
+  display: flex;
+  gap: 0.4rem;
+  width: 600px;
+  height: 430px;
+}
+
+section img {
+  width: 0;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.5s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+  }
+  &:first-child {
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+  }
+  &:last-child {
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+}
